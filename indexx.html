@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>
+</title>
+</head>
+<body bgcolor="green">
+<font color="blue">  
+<h1><b><center>STUDENT MANAGEMENT SYSTEM</center></b></h1>
+<marquee direction="right">School reopen on 18/02/12021</marquee>
+</font>
+<font color="orange">
+<h2><b><u>List of Students</u></b></h2>
+{% for i in data %}
+{{i.Name}}<br>
+{{i.Email}}<br>
+{% endfor %}
+</font>
+
+</body>
