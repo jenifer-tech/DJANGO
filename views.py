@@ -1,8 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from company.models import Student
+from django.views.decorators.cache import cache_page
 
 # Create your views here.
-def home_view(request):
-    key=Student.objects.all()
-    return render(request,"indexx.html",{'data':key})
+@cache_page(30)
+def home(request):
+    return render(request,'app/course.html')
+@cache_page(30)
+def contact(request):
+    return render(request,'app/contact.html')    
+
